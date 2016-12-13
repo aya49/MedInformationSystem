@@ -7,3 +7,6 @@
  would occur between a medical professional (user) and the information system.
 + [ERD.jpg] (./ERD.jpg) is the ERD (Entity Relationship Diagram) that displays the design of the database.
 + More materials to come :)
+
+System Preview: (Patient Profile)
+![PP] (./patient_profile.png)
