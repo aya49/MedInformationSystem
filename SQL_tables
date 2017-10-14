@@ -57,6 +57,9 @@ INTO Patient VALUES ('P0018', 'Jack', 'Martin', '01/01/1981', 'F', '6546789281',
 INTO Patient VALUES ('P0019', 'Jan', 'Taylor', '01/01/1971', 'F', '1432789586', '234-0003 Gateway St')
 INTO Patient VALUES ('P0020', 'Joanna', 'Moore', '01/01/1951', 'M', '1209890997', '998-5533 Lucy St')
 SELECT * FROM DUAL;
+
+
+
 /*Allergy*/
 SELECT * FROM Allergy;
 DROP TABLE Allergy;
@@ -89,6 +92,9 @@ INTO Allergy VALUES ('A0018', 'Soy', 'Food')
 INTO Allergy VALUES ('A0019', 'Hives', 'Other')
 INTO Allergy VALUES ('A0020', 'Casein', 'Food')
 SELECT * FROM DUAL;
+
+
+
 /*Disease*/
 SELECT * FROM Disease;
 DROP TABLE Disease;
@@ -111,6 +117,9 @@ INTO Disease VALUES ('D0008', 'Chest', 'Pain')
 INTO Disease VALUES ('D0009', 'Burns', 'Accidental injury')
 INTO Disease VALUES ('D0010', 'Syndrome X', 'Diabetes')
 SELECT * FROM DUAL;
+
+
+
 
 /*Medication*/
 SELECT * FROM Medication;
@@ -144,6 +153,10 @@ INTO Medication VALUES ('M0018', 'OxyContin', 'Hallucinogens')
 INTO Medication VALUES ('M0019', 'Phentermine', 'Analgesic')
 INTO Medication VALUES ('M0020', 'Seroquel', 'Other')
 SELECT * FROM DUAL;
+
+
+
+
 /*Therapy*/
 SELECT * FROM Therapy;
 DROP TABLE Therapy;
@@ -166,6 +179,10 @@ INTO Therapy VALUES ('TH008', 'Vertical', 'Reflexology')
 INTO Therapy VALUES ('TH009', 'Art Therapy', 'Psychotherapy')
 INTO Therapy VALUES ('TH010', 'Intravenous', 'Osmotherapy')
 SELECT * FROM DUAL;
+
+
+
+
 /*Hospital*/
 SELECT * FROM Hospital;
 DROP TABLE Hospital;
@@ -179,6 +196,9 @@ INSERT ALL
 INTO Hospital VALUES ('H0001', 'CASA Institute')
 SELECT * FROM DUAL;
 --Associative Entities
+
+
+
 /*Department*/
 SELECT * FROM Department;
 DROP TABLE Department;
@@ -198,6 +218,9 @@ INTO Department VALUES ('HD001', 'Emergency', 'H0001')
 INTO Department VALUES ('HD002', 'Intensive-Care', 'H0001')
 INTO Department VALUES ('HD003', 'Coronary-Care', 'H0001')
 SELECT * FROM DUAL;
+
+
+
 /*Physician*/
 SELECT * FROM Physician;
 DROP TABLE Physician;
@@ -225,6 +248,9 @@ INTO Physician VALUES ('PH008', 'Tom', 'Beeke', 'HD008')
 INTO Physician VALUES ('PH009', 'Robert', 'Lockwood', 'HD009')
 INTO Physician VALUES ('PH010', 'Anna', 'Shoemaker', 'HD010')
 SELECT * FROM DUAL;
+
+
+
 /*Visit*/
 SELECT * FROM Visit;
 DROP TABLE Visit;
@@ -268,6 +294,9 @@ INTO Visit VALUES ('V0008', '03/22/2013', 'P0008', 'PH008')
 INTO Visit VALUES ('V0009', '03/21/2013', 'P0009', 'PH009')
 INTO Visit VALUES ('V0010', '03/26/2013', 'P0010', 'PH010')
 SELECT * FROM DUAL;
+
+
+
 /*Test*/
 SELECT * FROM Test;
 DROP TABLE Test;
@@ -294,6 +323,9 @@ INTO Test(Test_ID, Visit_ID)  VALUES ('T0008', 'V0008')
 INTO Test(Test_ID, Visit_ID)  VALUES ('T0009', 'V0009')
 INTO Test(Test_ID, Visit_ID)  VALUES ('T0010', 'V0010')
 SELECT * FROM DUAL;
+
+
+
 /*Bed*/
 SELECT * FROM Bed;
 DROP TABLE Bed;
@@ -319,6 +351,9 @@ INTO Bed VALUES ('B0008', 'HD008')
 INTO Bed VALUES ('B0009', 'HD009')
 INTO Bed VALUES ('B0010', 'HD010')
 SELECT * FROM DUAL;
+
+
+
 /*Bed_Registry*/
 SELECT * FROM Bed_Registry;
 DROP TABLE Bed_Registry;
@@ -364,6 +399,10 @@ INTO Bed_Registry VALUES ('V0008', 'B0008', '04/02/2013', '04/04/2013')
 INTO Bed_Registry VALUES ('V0009', 'B0009', '04/01/2013', '04/02/2013')
 INTO Bed_Registry VALUES ('V0010', 'B0010', '03/28/2013', '03/29/2013')
 SELECT * FROM DUAL;
+
+
+
+
 /*Med_Allergy*/
 SELECT * FROM Med_Allergy;
 DROP TABLE Med_Allergy;
@@ -394,6 +433,9 @@ INTO Med_Allergy VALUES ('P0008', 'M0008')
 INTO Med_Allergy VALUES ('P0009', 'M0009')
 INTO Med_Allergy VALUES ('P0010', 'M0010')
 SELECT * FROM DUAL;
+
+
+
 /*Nonmed_Allergy*/
 SELECT * FROM Nonmed_Allergy;
 DROP TABLE Nonmed_Allergy;
@@ -424,6 +466,9 @@ INTO Nonmed_Allergy VALUES ('P0008', 'A0008')
 INTO Nonmed_Allergy VALUES ('P0009', 'A0009')
 INTO Nonmed_Allergy VALUES ('P0010', 'A0010')
 SELECT * FROM DUAL;
+
+
+
 /*Diagnosis*/
 SELECT * FROM Diagnosis;
 DROP TABLE Diagnosis;
@@ -454,6 +499,9 @@ INTO Diagnosis VALUES ('V0008', 'D0008')
 INTO Diagnosis VALUES ('V0009', 'D0009')
 INTO Diagnosis VALUES ('V0010', 'D0010')
 SELECT * FROM DUAL;
+
+
+
 /*Prescription*/
 SELECT * FROM Prescription;
 DROP TABLE Prescription;
@@ -499,6 +547,10 @@ INTO Prescription VALUES ('V0008', 'M0008', '04/02/2013', '04/04/2013')
 INTO Prescription VALUES ('V0009', 'M0009', '04/01/2013', '04/02/2013')
 INTO Prescription VALUES ('V0010', 'M0010', '03/28/2013', '03/29/2013')
 SELECT * FROM DUAL;
+
+
+
+
 /*Therapy_Assignment*/
 SELECT * FROM Therapy_Assignment;
 DROP TABLE Therapy_Assignment;
