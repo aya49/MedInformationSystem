@@ -1,0 +1,40 @@
+/*Medical Allergy*/
+SELECT	ma.Patient_ID,
+ma.Medication_ID ||' - '|| m.Name "Medical Allergen"
+FROM		MED_ALLERGY ma, Medication m
+WHERE	ma.Patient_ID =:P40_Patient_ID AND ma.medication_ID=m.medication_ID
+
+/*Nonmedical Allergy*/
+SELECT	na.Patient_ID,
+na.Allergy_ID ||' - '|| a.Allergen "Allergen"
+FROM		NONMED_ALLERGY na, Allergy a
+WHERE	na.Patient_ID =:P40_Patient_ID AND na.allergy_ID=a.allergy_ID
+
+/*Diagnostic History*/
+SELECT	v.visit_Date "Date",
+di.Disease_ID ||' - '|| d.name "Disease",
+d.type "Type"
+FROM		Visit v, Diagnosis di, Disease d
+WHERE	v.Patient_ID=:P40_Patient_ID AND v.Visit_ID=di.Visit_ID AND di.disease_ID=d.disease_ID
+
+/*Medication History*/
+SELECT	v.visit_Date "Date",
+p.Medication_ID ||' - '|| m.name "Medication",
+m.type "Type"
+FROM		Visit v, prescription p, Medication m
+WHERE	v.Patient_ID=:P40_Patient_ID AND v.Visit_ID=p.Visit_ID AND p.medication_ID=m.medication_ID
+
+/*Therapeutic History*/
+SELECT	v.visit_Date "Date",
+ta.therapy_ID ||' - '|| t.name "Therapy",
+t.type "Type"
+FROM		Visit v, Therapy_Assignment ta, Therapy t
+WHERE	v.Patient_ID=:P40_Patient_ID AND v.Visit_ID=ta.Visit_ID AND ta.Therapy_ID=t.Therapy_ID
+
+/*Bed Registry*/
+SELECT	br.Admission_date "Admission Date",
+br.Discharge_Date "Discharge Date",
+b.bed_id "Bed",
+d.department_ID ||' - '|| d.name "Department"
+FROM		Bed_registry br, Visit v, Department d, bed b
+WHERE	v.Patient_ID=:P40_Patient_ID AND v.Visit_ID=br.Visit_ID AND br.bed_ID=b.bed_ID AND b.department_ID=d.department_ID
