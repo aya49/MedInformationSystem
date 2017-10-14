@@ -17,6 +17,6 @@ Oracle APEX Login: http://apex.oracle.com/pls/apex/
  + User: Silverlo@Uvic.ca
  + Password: 123sjx
  + Application: H201 The Hospital
-(note: online preview version has expired, working on update)
+Note: online preview version has expired
 
 ![PP](./patient_profile.png)
