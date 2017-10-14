@@ -13,6 +13,9 @@ return Side_Effect ;
 EXCEPTION
 WHEN NO_DATA_FOUND THEN return 'GOOOO';
 END Find_ADR; /
+
+
+
 /*Med_Allergy_Warning Trigger*/
 CREATE OR REPLACE TRIGGER Med_Allergy_Warning BEFORE INSERT ON Prescription FOR EACH ROW
 BEGIN
