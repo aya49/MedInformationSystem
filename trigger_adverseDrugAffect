@@ -1,0 +1,23 @@
+/*Find_MA Function*/
+CREATE OR REPLACE FUNCTION Find_ADR(v_id IN CHAR, m_id IN CHAR)
+RETURN CHAR
+AS	Side_Effect Medication.medication_ID %TYPE;
+BEGIN  
+SELECT	m.medication_ID INTO Side_Effect 
+FROM		visit v, med_allergy a, medication m
+WHERE	v.visit_ID=v_id AND
+v.patient_ID=a.patient_ID AND
+m.medication_ID=m_ID AND
+m.medication_ID=a.medication_ID;
+return Side_Effect ;
+EXCEPTION
+WHEN NO_DATA_FOUND THEN return 'GOOOO';
+END Find_ADR; /
+/*Med_Allergy_Warning Trigger*/
+CREATE OR REPLACE TRIGGER Med_Allergy_Warning BEFORE INSERT ON Prescription FOR EACH ROW
+BEGIN
+	IF (Find_ADR(:NEW.Visit_ID, :NEW.Medication_ID) != 'GOOOO') THEN
+		apex_application.g_print_success_message:= 'Medication ('||:NEW.Medication_ID||') May cause an allergic reaction… You are warned! However, ';
+	ELSE	apex_application.g_print_success_message:= 'Medication ('||:NEW.Medication_ID||') was prescribed successfully!';
+END IF;
+END;/ 
