@@ -12,7 +12,7 @@ This is a demo of a medical information intended for a doctor's office. This inf
 
 ## System Preview: (Patient Profile)
 
-+ Oracle APEX Login: http://apex.oracle.com/pls/apex/
+Oracle APEX Login: http://apex.oracle.com/pls/apex/
  + Workspace: H201
  + User: Silverlo@Uvic.ca
  + Password: 123sjx
