@@ -11,11 +11,12 @@ This is a demo of a medical information intended for a doctor's office. This inf
 + More materials to come :)
 
 ## System Preview: (Patient Profile)
-![PP](./patient_profile.png)
+
 + Oracle APEX Login: http://apex.oracle.com/pls/apex/
-++ Workspace: H201
-++ User: Silverlo@Uvic.ca
-++ Password: 123sjx
-++ Application: H201 The Hospital
+ + Workspace: H201
+ + User: Silverlo@Uvic.ca
+ + Password: 123sjx
+ + Application: H201 The Hospital
 (note: online preview version has expired, working on update)
 
+![PP](./patient_profile.png)
