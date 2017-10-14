@@ -1,0 +1,546 @@
+/*Patient*/
+SELECT * FROM Patient;
+DROP TABLE Patient;
+
+CREATE TABLE Patient (
+Patient_ID	CHAR(5)		CONSTRAINT Patient_PK PRIMARY KEY,
+First_Name	VARCHAR2(20)	NOT NULL,
+Last_Name	VARCHAR2(20)	NOT NULL,
+DoB		DATE,
+ Sex		CHAR(1),
+ Phone		NUMBER(10),
+ Address	VARCHAR2(40)
+);
+
+INSERT ALL
+INTO Patient VALUES ('P0001', 'Ken', 'Lee', '01-JAN-91', 'M', '6044646464', '101-1001 Finnerty Rd')
+INTO Patient VALUES ('P0002', 'Alice', 'Adama', '28-SEP-89', 'M', '2400938591', '102-2204 Cedar Cross Rd')
+INTO Patient VALUES ('P0003', 'Barry', 'Baker', '05-MAR-85', 'F', '2385959302', '203-2123 Adelaid St')
+INTO Patient VALUES ('P0004', 'Adalbert', 'Thomas', '21-MAR-81', 'M', '5938490234', '204-8443 Central Rd')
+INTO Patient VALUES ('P0005', 'Baltazar', 'Pauline', '29-SEP-99', 'M', '5837264847', '298-9543 China St')
+INTO Patient VALUES ('P0006', 'Alojzy', 'Harris', '14-NOV-74', 'M', '3948593049', '894-8765 Copper St')
+INTO Patient VALUES ('P0007', 'Cecylia', 'Martin', '30-AUG-70', 'F', '9847380596', '283-9843 Corn St')
+INTO Patient VALUES ('P0008', 'Edward', 'Clark', '05-JUL-75', 'F', '2857483043', '210-1234 Costume St')
+INTO Patient VALUES ('P0009', 'Ben', 'Lewis', '06-MAY-76', 'M', '4583490596', '103-8554 Bay Rd')
+INTO Patient VALUES ('P0010', 'Benth', 'Hall', '23-APR-64', 'F', '8545490594', '987-7655 Barn Rd')
+INTO Patient VALUES ('P0011', 'Flora', 'Allen', '24-AUG-74', 'M', '1284029384', '123-9870 Eastern St')
+INTO Patient VALUES ('P0012', 'Filip', 'Young', '30-DEC-77', 'M', '3848594039', '346-5891 East Hill Avenue')
+INTO Patient VALUES ('P0013', 'Ewa', 'King', '04-OCT-97', 'M', '5469302831', '876-2052 Easy St')
+INTO Patient VALUES ('P0014', 'Elzbieta', 'Hill', '22-JUN-88', 'F', '6594830293', '345-862 Elisabeth St')
+INTO Patient VALUES ('P0015', 'Gabriel', 'Scott', '04-AUG-68', 'F', '7547890293', '202-122 Farmer St')
+INTO Patient VALUES ('P0016', 'Helen', 'Green', '17-SEP-77', 'F', '5439685432', '122-333 Federation Rd')
+INTO Patient VALUES ('P0017', 'Harry', 'Adams', '01-JUN-78', 'M', '8593321234', '203-4443 Greenpark Rd')
+INTO Patient VALUES ('P0018', 'Jack', 'Martin', '31-MAR-69', 'F', '6546789281', '229-9983 Hazlett Avenue')
+INTO Patient VALUES ('P0019', 'Jan', 'Taylor', '14-SEP-83', 'F', '1432789586', '234-0003 Gateway St')
+INTO Patient VALUES ('P0020', 'Joanna', 'Moore', '20-JUN-93', 'M', '1209890997', '998-5533 Lucy St')
+SELECT * FROM DUAL;
+
+INSERT ALL
+INTO Patient VALUES ('P0001', 'Ken', 'Lee', '01/01/1981', 'M', '6044646464', '101-1001 Finnerty Rd')
+INTO Patient VALUES ('P0002', 'Alice', 'Adama', '01/01/1971', 'M', '2400938591', '102-2204 Cedar Cross Rd')
+INTO Patient VALUES ('P0003', 'Barry', 'Baker', '01/01/1961', 'F', '2385959302', '203-2123 Adelaid St')
+INTO Patient VALUES ('P0004', 'Adalbert', 'Thomas', '01/01/1951', 'M', '5938490234', '204-8443 Central Rd')
+INTO Patient VALUES ('P0005', 'Baltazar', 'Pauline', '01/01/1991', 'M', '5837264847', '298-9543 China St')
+INTO Patient VALUES ('P0006', 'Alojzy', 'Harris', '01/01/1981', 'M', '3948593049', '894-8765 Copper St')
+INTO Patient VALUES ('P0007', 'Cecylia', 'Martin', '01/01/1971', 'F', '9847380596', '283-9843 Corn St')
+INTO Patient VALUES ('P0008', 'Edward', 'Clark', '01/01/1961', 'F', '2857483043', '210-1234 Costume St')
+INTO Patient VALUES ('P0009', 'Ben', 'Lewis', '01/01/1951', 'M', '4583490596', '103-8554 Bay Rd')
+INTO Patient VALUES ('P0010', 'Benth', 'Hall', '01/01/1941', 'F', '8545490594', '987-7655 Barn Rd')
+INTO Patient VALUES ('P0011', 'Flora', 'Allen', '01/01/1991', 'M', '1284029384', '123-9870 Eastern St')
+INTO Patient VALUES ('P0012', 'Filip', 'Young', '01/01/1981', 'M', '3848594039', '346-5891 East Hill Avenue')
+INTO Patient VALUES ('P0013', 'Ewa', 'King', '01/01/1971', 'M', '5469302831', '876-2052 Easy St')
+INTO Patient VALUES ('P0014', 'Elzbieta', 'Hill', '01/01/1961', 'F', '6594830293', '345-862 Elisabeth St')
+INTO Patient VALUES ('P0015', 'Gabriel', 'Scott', '01/01/1951', 'F', '7547890293', '202-122 Farmer St')
+INTO Patient VALUES ('P0016', 'Helen', 'Green', '01/01/1941', 'F', '5439685432', '122-333 Federation Rd')
+INTO Patient VALUES ('P0017', 'Harry', 'Adams', '01/01/1991', 'M', '8593321234', '203-4443 Greenpark Rd')
+INTO Patient VALUES ('P0018', 'Jack', 'Martin', '01/01/1981', 'F', '6546789281', '229-9983 Hazlett Avenue')
+INTO Patient VALUES ('P0019', 'Jan', 'Taylor', '01/01/1971', 'F', '1432789586', '234-0003 Gateway St')
+INTO Patient VALUES ('P0020', 'Joanna', 'Moore', '01/01/1951', 'M', '1209890997', '998-5533 Lucy St')
+SELECT * FROM DUAL;
+/*Allergy*/
+SELECT * FROM Allergy;
+DROP TABLE Allergy;
+
+CREATE TABLE Allergy (
+Allergy_ID	CHAR(5)		CONSTRAINT Allergy_PK PRIMARY KEY,
+ Allergen	VARCHAR2(20)	NOT NULL,
+ Type		VARCHAR2(20)
+);
+
+INSERT ALL
+INTO Allergy VALUES ('A0001', 'Apple', 'Food')
+INTO Allergy VALUES ('A0002', 'Milk', 'Food')
+INTO Allergy VALUES ('A0003', 'Mold', 'Other')
+INTO Allergy VALUES ('A0004', 'Wheat', 'Food')
+INTO Allergy VALUES ('A0005', 'Shellfish', 'Food')
+INTO Allergy VALUES ('A0006', 'Dog', 'Animal')
+INTO Allergy VALUES ('A0007', 'Gluten', 'Protein')
+INTO Allergy VALUES ('A0008', 'Cat', 'Animal')
+INTO Allergy VALUES ('A0009', 'Hay Fever', 'Other')
+INTO Allergy VALUES ('A0010', 'Pollen', 'Plant')
+INTO Allergy VALUES ('A0011', 'UV', 'Other')
+INTO Allergy VALUES ('A0012', 'Grass', 'Plant')
+INTO Allergy VALUES ('A0013', 'Rat', 'Animal')
+INTO Allergy VALUES ('A0014', 'Almond', 'Food')
+INTO Allergy VALUES ('A0015', 'Peanut', 'Food')
+INTO Allergy VALUES ('A0016', 'Starfish', 'Food')
+INTO Allergy VALUES ('A0017', 'Bee Stings', 'Other')
+INTO Allergy VALUES ('A0018', 'Soy', 'Food')
+INTO Allergy VALUES ('A0019', 'Hives', 'Other')
+INTO Allergy VALUES ('A0020', 'Casein', 'Food')
+SELECT * FROM DUAL;
+/*Disease*/
+SELECT * FROM Disease;
+DROP TABLE Disease;
+
+CREATE TABLE Disease (
+Disease_ID	CHAR(5)		CONSTRAINT Disease_PK PRIMARY KEY,
+Name		VARCHAR2(20)	NOT NULL,
+ Type		VARCHAR2(20)
+);
+
+INSERT ALL
+INTO Disease VALUES ('D0001', 'Bipolar I', 'Mental')
+INTO Disease VALUES ('D0002', 'Depression', 'Mental')
+INTO Disease VALUES ('D0003', 'Abdominal', 'Pain')
+INTO Disease VALUES ('D0004', 'Gestational Diabetes', 'Diabetes')
+INTO Disease VALUES ('D0005', 'Back', 'Pain')
+INTO Disease VALUES ('D0006', 'Melanoma', 'Cancer')
+INTO Disease VALUES ('D0007', 'Lymphoma', 'Caner')
+INTO Disease VALUES ('D0008', 'Chest', 'Pain')
+INTO Disease VALUES ('D0009', 'Burns', 'Accidental injury')
+INTO Disease VALUES ('D0010', 'Syndrome X', 'Diabetes')
+SELECT * FROM DUAL;
+
+/*Medication*/
+SELECT * FROM Medication;
+DROP TABLE Medication;
+
+CREATE TABLE Medication (
+Medication_ID	CHAR(5)		CONSTRAINT Medication_PK PRIMARY KEY,
+ Name		VARCHAR2(20)	NOT NULL,
+ Type		VARCHAR2(20)
+);
+
+INSERT ALL
+INTO Medication VALUES ('M0001', 'Aspirin', 'Analgesic')
+INTO Medication VALUES ('M0002', 'Amphetamines', 'Stimulant')
+INTO Medication VALUES ('M0003', 'Methamphetamine', 'Stimulant')
+INTO Medication VALUES ('M0004', 'Mushrooms', 'Hallucinogens')
+INTO Medication VALUES ('M0005', 'Naproxen', 'Inhalants')
+INTO Medication VALUES ('M0006', 'Heroin', 'Opiates')
+INTO Medication VALUES ('M0007', 'Steroids', 'Other')
+INTO Medication VALUES ('M0008', 'PCP', 'Hallucinogens')
+INTO Medication VALUES ('M0009', 'Hash', 'Other')
+INTO Medication VALUES ('M0010', 'Amibien', 'Other')
+INTO Medication VALUES ('M0011', 'Atenolol', 'Opiates')
+INTO Medication VALUES ('M0012', 'Hydrochlorothiazide', 'Inhalants')
+INTO Medication VALUES ('M0013', 'Lipitor', 'Opiates')
+INTO Medication VALUES ('M0014', 'Lisinopril', 'Inhalants')
+INTO Medication VALUES ('M0015', 'Methadone', 'Stimulant')
+INTO Medication VALUES ('M0016', 'Oxycodone', 'Hallucinogens')
+INTO Medication VALUES ('M0017', 'Methocarbamol', 'Opiates')
+INTO Medication VALUES ('M0018', 'OxyContin', 'Hallucinogens')
+INTO Medication VALUES ('M0019', 'Phentermine', 'Analgesic')
+INTO Medication VALUES ('M0020', 'Seroquel', 'Other')
+SELECT * FROM DUAL;
+/*Therapy*/
+SELECT * FROM Therapy;
+DROP TABLE Therapy;
+
+CREATE TABLE Therapy (
+Therapy_ID	CHAR(5)		CONSTRAINT Therapy_PK PRIMARY KEY,
+ Name		VARCHAR2(20)	NOT NULL,
+ Type		VARCHAR2(20)
+);
+
+INSERT ALL
+INTO Therapy VALUES ('TH001', 'CBT', 'Psychotherapy')
+INTO Therapy VALUES ('TH002', 'Oral Administration', 'Osmotherapy')
+INTO Therapy VALUES ('TH003', 'Furukawa', 'Pharmacotherapy')
+INTO Therapy VALUES ('TH004', 'Family Therapy', 'Psychotherapy')
+INTO Therapy VALUES ('TH005', 'Steroids', 'Pharmacotherapy')
+INTO Therapy VALUES ('TH006', 'Facial', 'Reflexology')
+INTO Therapy VALUES ('TH007', 'DMT', 'Psychotherapy')
+INTO Therapy VALUES ('TH008', 'Vertical', 'Reflexology')
+INTO Therapy VALUES ('TH009', 'Art Therapy', 'Psychotherapy')
+INTO Therapy VALUES ('TH010', 'Intravenous', 'Osmotherapy')
+SELECT * FROM DUAL;
+/*Hospital*/
+SELECT * FROM Hospital;
+DROP TABLE Hospital;
+
+CREATE TABLE Hospital (
+Hospital_ID	CHAR(5)		CONSTRAINT Hospital_PK PRIMARY KEY,
+ Name		VARCHAR2(20)	NOT NULL
+);
+
+INSERT ALL
+INTO Hospital VALUES ('H0001', 'CASA Institute')
+SELECT * FROM DUAL;
+--Associative Entities
+/*Department*/
+SELECT * FROM Department;
+DROP TABLE Department;
+
+CREATE TABLE Department (
+Department_ID	CHAR(5)		CONSTRAINT Department_PK PRIMARY KEY,
+ Name		VARCHAR2(20)	NOT NULL,
+Hospital_ID	CHAR(5)		NOT NULL,
+  CONSTRAINT dept_FK_hospital
+   FOREIGN KEY (Hospital_ID)
+   REFERENCES Hospital (Hospital_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Department VALUES ('HD001', 'Emergency', 'H0001')
+INTO Department VALUES ('HD002', 'Intensive-Care', 'H0001')
+INTO Department VALUES ('HD003', 'Coronary-Care', 'H0001')
+SELECT * FROM DUAL;
+/*Physician*/
+SELECT * FROM Physician;
+DROP TABLE Physician;
+
+CREATE TABLE Physician (
+Physician_ID	CHAR(5)		CONSTRAINT Physician_PK PRIMARY KEY,
+First_Name	VARCHAR2(20)	NOT NULL,
+Last_Name	VARCHAR2(20)	NOT NULL,
+Department_ID	CHAR(5)	,
+  CONSTRAINT physician_FK_dept
+   FOREIGN KEY (Department_ID)
+   REFERENCES Department (Department_ID)
+   ON DELETE SET NULL
+);
+
+INSERT ALL
+INTO Physician VALUES ('PH001', 'Joy', 'Lee', 'HD001')
+INTO Physician VALUES ('PH002', 'Mary', 'George', 'HD002')
+INTO Physician VALUES ('PH003', 'Sandy', 'Lee', 'HD003')
+INTO Physician VALUES ('PH004', 'Luna', 'Chan', 'HD004')
+INTO Physician VALUES ('PH005', 'Jacky', 'Bishop', 'HD005')
+INTO Physician VALUES ('PH006', 'Susan', 'Jackson', 'HD006')
+INTO Physician VALUES ('PH007', 'Tracy', 'wong', 'HD007')
+INTO Physician VALUES ('PH008', 'Tom', 'Beeke', 'HD008')
+INTO Physician VALUES ('PH009', 'Robert', 'Lockwood', 'HD009')
+INTO Physician VALUES ('PH010', 'Anna', 'Shoemaker', 'HD010')
+SELECT * FROM DUAL;
+/*Visit*/
+SELECT * FROM Visit;
+DROP TABLE Visit;
+
+CREATE TABLE Visit (
+Visit_ID	CHAR(5)	CONSTRAINT Visit_PK PRIMARY KEY,
+Visit_date	DATE		NOT NULL,
+Patient_ID	CHAR(5)	NOT NULL,
+Physician_ID	CHAR(5),
+  CONSTRAINT visit_FK_patient
+   FOREIGN KEY (Patient_ID)
+   REFERENCES Patient (Patient_ID)
+   ON DELETE CASCADE,
+  CONSTRAINT visit_FK_physician
+   FOREIGN KEY (Physician_ID)
+   REFERENCES Physician (Physician_ID)
+   ON DELETE SET NULL
+);
+INSERT ALL
+INTO Visit VALUES ('V0001', '31-MAR-08', 'P0001', 'PH001')
+INTO Visit VALUES ('V0002', '16-JAN-13', 'P0002', 'PH002')
+INTO Visit VALUES ('V0003', '03-JUN-12', 'P0003', 'PH003')
+INTO Visit VALUES ('V0004', '07-JUL-11', 'P0004', 'PH004')
+INTO Visit VALUES ('V0005', '19-SEP-11', 'P0005', 'PH005')
+INTO Visit VALUES ('V0006', '15-NOV-12', 'P0006', 'PH006')
+INTO Visit VALUES ('V0007', '11-AUG-12', 'P0007', 'PH007')
+INTO Visit VALUES ('V0008', '23-MAY-09', 'P0008', 'PH008')
+INTO Visit VALUES ('V0009', '11-APR-11', 'P0009', 'PH009')
+INTO Visit VALUES ('V0010', '20-MAY-08', 'P0010', 'PH010')
+SELECT * FROM DUAL;
+
+INSERT ALL
+INTO Visit VALUES ('V0001', '04/01/2013', 'P0001', 'PH001')
+INTO Visit VALUES ('V0002', '04/05/2013', 'P0002', 'PH002')
+INTO Visit VALUES ('V0003', '04/04/2013', 'P0003', 'PH003')
+INTO Visit VALUES ('V0004', '04/03/2013', 'P0004', 'PH004')
+INTO Visit VALUES ('V0005', '03/02/2013', 'P0005', 'PH005')
+INTO Visit VALUES ('V0006', '03/28/2013', 'P0006', 'PH006')
+INTO Visit VALUES ('V0007', '03/24/2013', 'P0007', 'PH007')
+INTO Visit VALUES ('V0008', '03/22/2013', 'P0008', 'PH008')
+INTO Visit VALUES ('V0009', '03/21/2013', 'P0009', 'PH009')
+INTO Visit VALUES ('V0010', '03/26/2013', 'P0010', 'PH010')
+SELECT * FROM DUAL;
+/*Test*/
+SELECT * FROM Test;
+DROP TABLE Test;
+
+CREATE TABLE Test (
+Test_ID		CHAR(5)		CONSTRAINT Test_PK PRIMARY KEY,
+Visit_ID	CHAR(5)		NOT NULL,
+Result		VARCHAR2(30),
+  CONSTRAINT test_FK_visit
+   FOREIGN KEY (Visit_ID)
+   REFERENCES Visit (Visit_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Test(Test_ID, Visit_ID) VALUES ('T0001', 'V0001')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0002', 'V0002')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0003', 'V0003')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0004', 'V0004')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0005', 'V0005')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0006', 'V0006')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0007', 'V0007')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0008', 'V0008')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0009', 'V0009')
+INTO Test(Test_ID, Visit_ID)  VALUES ('T0010', 'V0010')
+SELECT * FROM DUAL;
+/*Bed*/
+SELECT * FROM Bed;
+DROP TABLE Bed;
+
+CREATE TABLE Bed (
+Bed_ID		CHAR(5)		CONSTRAINT Bed_PK PRIMARY KEY,
+Department_ID	CHAR(5)		NOT NULL,
+  CONSTRAINT bed_FK_Department
+   FOREIGN KEY (Department_ID)
+   REFERENCES Department (Department_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Bed VALUES ('B0001', 'HD001')
+INTO Bed VALUES ('B0002', 'HD002')
+INTO Bed VALUES ('B0003', 'HD003')
+INTO Bed VALUES ('B0004', 'HD004')
+INTO Bed VALUES ('B0005', 'HD005')
+INTO Bed VALUES ('B0006', 'HD006')
+INTO Bed VALUES ('B0007', 'HD007')
+INTO Bed VALUES ('B0008', 'HD008')
+INTO Bed VALUES ('B0009', 'HD009')
+INTO Bed VALUES ('B0010', 'HD010')
+SELECT * FROM DUAL;
+/*Bed_Registry*/
+SELECT * FROM Bed_Registry;
+DROP TABLE Bed_Registry;
+
+CREATE TABLE Bed_Registry (
+ Visit_ID	CHAR(5),
+ Bed_ID		CHAR(5),
+ Admission_Date DATE		NOT NULL,
+ Discharge_Date	DATE,
+  CONSTRAINT BR_PK PRIMARY KEY(Visit_ID, Bed_ID),
+  CONSTRAINT BR_FK_visit
+   FOREIGN KEY (Visit_ID)
+   REFERENCES Visit (Visit_ID)
+   ON DELETE CASCADE,
+  CONSTRAINT BR_FK_bed
+   FOREIGN KEY (Bed_ID)
+   REFERENCES Bed (Bed_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Bed_Registry VALUES ('V0001', 'B0001', '04-JUN-12', '07-JUL-12')
+INTO Bed_Registry VALUES ('V0002', 'B0002', '24-APR-10', '07-MAY-11')
+INTO Bed_Registry VALUES ('V0003', 'B0003', '08-MAY-10', '13-MAY-10')
+INTO Bed_Registry VALUES ('V0004', 'B0004', '09-JUN-12', '04-JUL-12')
+INTO Bed_Registry VALUES ('V0005', 'B0005', '09-JUN-09', '05-JUL-09')
+INTO Bed_Registry VALUES ('V0006', 'B0006', '02-JAN-13', '04-JAN-13')
+INTO Bed_Registry VALUES ('V0007', 'B0007', '14-APR-12', '16-APR-13')
+INTO Bed_Registry VALUES ('V0008', 'B0008', '03-AUG-12', '05-SEP-12')
+INTO Bed_Registry VALUES ('V0009', 'B0009', '21-DEC-12', '22-DEC-12')
+INTO Bed_Registry VALUES ('V0010', 'B0010', '11-OCT-13', '14-OCT-13')
+SELECT * FROM DUAL;
+
+INSERT ALL
+INTO Bed_Registry VALUES ('V0001', 'B0001', '06/02/2012', '06/04/2012')
+INTO Bed_Registry VALUES ('V0002', 'B0002', '04/10/2010', '04/18/2010')
+INTO Bed_Registry VALUES ('V0003', 'B0003', '05/08/2010', '05/10/2010')
+INTO Bed_Registry VALUES ('V0004', 'B0004', '06/09/2012', '06/25/2012')
+INTO Bed_Registry VALUES ('V0005', 'B0005', '06/05/2009', '06/30/2009')
+INTO Bed_Registry VALUES ('V0006', 'B0006', '04/03/2013', '04/04/2013')
+INTO Bed_Registry VALUES ('V0007', 'B0007', '03/02/2012', '03/28/2012')
+INTO Bed_Registry VALUES ('V0008', 'B0008', '04/02/2013', '04/04/2013')
+INTO Bed_Registry VALUES ('V0009', 'B0009', '04/01/2013', '04/02/2013')
+INTO Bed_Registry VALUES ('V0010', 'B0010', '03/28/2013', '03/29/2013')
+SELECT * FROM DUAL;
+/*Med_Allergy*/
+SELECT * FROM Med_Allergy;
+DROP TABLE Med_Allergy;
+
+CREATE TABLE Med_Allergy (
+Patient_ID	CHAR(5),
+Medication_ID	CHAR(5),
+  CONSTRAINT MA_PK PRIMARY KEY(Patient_ID, Medication_ID),
+  CONSTRAINT MA_FK_patient
+   FOREIGN KEY (Patient_ID)
+   REFERENCES Patient (Patient_ID)
+   ON DELETE CASCADE,
+  CONSTRAINT MA_FK_med
+   FOREIGN KEY (Medication_ID)
+   REFERENCES Medication (Medication_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Med_Allergy VALUES ('P0001', 'M0001')
+INTO Med_Allergy VALUES ('P0002', 'M0002')
+INTO Med_Allergy VALUES ('P0003', 'M0003')
+INTO Med_Allergy VALUES ('P0004', 'M0004')
+INTO Med_Allergy VALUES ('P0005', 'M0005')
+INTO Med_Allergy VALUES ('P0006', 'M0006')
+INTO Med_Allergy VALUES ('P0007', 'M0007')
+INTO Med_Allergy VALUES ('P0008', 'M0008')
+INTO Med_Allergy VALUES ('P0009', 'M0009')
+INTO Med_Allergy VALUES ('P0010', 'M0010')
+SELECT * FROM DUAL;
+/*Nonmed_Allergy*/
+SELECT * FROM Nonmed_Allergy;
+DROP TABLE Nonmed_Allergy;
+
+CREATE TABLE Nonmed_Allergy (
+Patient_ID	CHAR(5),
+Allergy_ID	CHAR(5),
+  CONSTRAINT NA_PK PRIMARY KEY(Patient_ID, Allergy_ID),
+  CONSTRAINT NA_FK_patient
+   FOREIGN KEY (Patient_ID)
+   REFERENCES Patient (Patient_ID)
+   ON DELETE CASCADE,
+  CONSTRAINT NA_FK_allergy
+   FOREIGN KEY (Allergy_ID)
+   REFERENCES Allergy (Allergy_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Nonmed_Allergy VALUES ('P0001', 'A0001')
+INTO Nonmed_Allergy VALUES ('P0002', 'A0002')
+INTO Nonmed_Allergy VALUES ('P0003', 'A0003')
+INTO Nonmed_Allergy VALUES ('P0004', 'A0004')
+INTO Nonmed_Allergy VALUES ('P0005', 'A0005')
+INTO Nonmed_Allergy VALUES ('P0006', 'A0006')
+INTO Nonmed_Allergy VALUES ('P0007', 'A0007')
+INTO Nonmed_Allergy VALUES ('P0008', 'A0008')
+INTO Nonmed_Allergy VALUES ('P0009', 'A0009')
+INTO Nonmed_Allergy VALUES ('P0010', 'A0010')
+SELECT * FROM DUAL;
+/*Diagnosis*/
+SELECT * FROM Diagnosis;
+DROP TABLE Diagnosis;
+
+CREATE TABLE Diagnosis (
+Visit_ID	CHAR(5),
+Disease_ID	CHAR(5),
+  CONSTRAINT Diagnosis_PK PRIMARY KEY(Visit_ID, Disease_ID),
+  CONSTRAINT diagnosis_FK_visit
+   FOREIGN KEY (Visit_ID)
+   REFERENCES Visit (Visit_ID)
+   ON DELETE CASCADE,
+  CONSTRAINT diagnosis_FK_disease
+   FOREIGN KEY (Disease_ID)
+   REFERENCES Disease (Disease_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Diagnosis VALUES ('V0001', 'D0001')
+INTO Diagnosis VALUES ('V0002', 'D0002')
+INTO Diagnosis VALUES ('V0003', 'D0003')
+INTO Diagnosis VALUES ('V0004', 'D0004')
+INTO Diagnosis VALUES ('V0005', 'D0005')
+INTO Diagnosis VALUES ('V0006', 'D0006')
+INTO Diagnosis VALUES ('V0007', 'D0007')
+INTO Diagnosis VALUES ('V0008', 'D0008')
+INTO Diagnosis VALUES ('V0009', 'D0009')
+INTO Diagnosis VALUES ('V0010', 'D0010')
+SELECT * FROM DUAL;
+/*Prescription*/
+SELECT * FROM Prescription;
+DROP TABLE Prescription;
+
+CREATE TABLE Prescription (
+Visit_ID	CHAR(5),
+Medication_ID	CHAR(5),
+Start_Date	DATE		NOT NULL,
+End_Date	DATE,
+  CONSTRAINT Prescription_PK PRIMARY KEY(Visit_ID, Medication_ID),
+  CONSTRAINT Prescription_FK_visit
+   FOREIGN KEY (Visit_ID)
+   REFERENCES Visit (Visit_ID)
+   ON DELETE CASCADE,
+  CONSTRAINT Prescription_FK_medication
+   FOREIGN KEY (Medication_ID)
+   REFERENCES Medication (Medication_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Prescription VALUES ('V0001', 'M0001', '03-JUN-12', '05-JUL-12')
+INTO Prescription VALUES ('V0002', 'M0002', '01-MAR-13', '05-MAY-13')
+INTO Prescription VALUES ('V0003', 'M0003', '17-APR-13', '11-MAY-13')
+INTO Prescription VALUES ('V0004', 'M0004', '11-SEP-11', '22-NOV-11')
+INTO Prescription VALUES ('V0005', 'M0005', '03-OCT-10', '20-OCT-10')
+INTO Prescription VALUES ('V0006', 'M0006', '02-JAN-09', '18-MAR-10')
+INTO Prescription VALUES ('V0007', 'M0007', '03-FEB-13', '05-MAY-13')
+INTO Prescription VALUES ('V0008', 'M0008', '02-MAY-09', '05-JAN-09')
+INTO Prescription VALUES ('V0009', 'M0009', '24-FEB-10', '09-AUG-10')
+INTO Prescription VALUES ('V0010', 'M0010', '25-MAR-10', '28-APR-13')
+SELECT * FROM DUAL;
+
+INSERT ALL
+INTO Prescription VALUES ('V0001', 'M0001', '06/02/2012', '06/04/2012')
+INTO Prescription VALUES ('V0002', 'M0002', '04/10/2010', '04/18/2010')
+INTO Prescription VALUES ('V0003', 'M0003', '05/08/2010', '05/10/2010')
+INTO Prescription VALUES ('V0004', 'M0004', '06/09/2012', '06/25/2012')
+INTO Prescription VALUES ('V0005', 'M0005', '06/05/2009', '06/30/2009')
+INTO Prescription VALUES ('V0006', 'M0006', '04/03/2013', '04/04/2013')
+INTO Prescription VALUES ('V0007', 'M0007', '03/02/2012', '03/28/2012')
+INTO Prescription VALUES ('V0008', 'M0008', '04/02/2013', '04/04/2013')
+INTO Prescription VALUES ('V0009', 'M0009', '04/01/2013', '04/02/2013')
+INTO Prescription VALUES ('V0010', 'M0010', '03/28/2013', '03/29/2013')
+SELECT * FROM DUAL;
+/*Therapy_Assignment*/
+SELECT * FROM Therapy_Assignment;
+DROP TABLE Therapy_Assignment;
+
+CREATE TABLE Therapy_Assignment (
+Visit_ID	CHAR(5),
+Therapy_ID	CHAR(5),
+Start_Date	DATE		NOT NULL,
+End_Date	DATE,
+  CONSTRAINT TA_PK PRIMARY KEY(Visit_ID, Therapy_ID),
+  CONSTRAINT TA_FK_visit
+   FOREIGN KEY (Visit_ID)
+   REFERENCES Visit (Visit_ID)
+   ON DELETE CASCADE,
+  CONSTRAINT TA_FK_Therapy
+   FOREIGN KEY (Therapy_ID)
+   REFERENCES Therapy (Therapy_ID)
+   ON DELETE CASCADE
+);
+
+INSERT ALL
+INTO Therapy_Assignment VALUES ('V0001', 'TH001', '03-MAR-13', '05-MAY-13')
+INTO Therapy_Assignment VALUES ('V0002', 'TH002', '22-APR-10', '05-MAY-11')
+INTO Therapy_Assignment VALUES ('V0003', 'TH003', '06-MAY-10', '12-MAY-10')
+INTO Therapy_Assignment VALUES ('V0004', 'TH004', '03-JUN-12', '03-JUL-12')
+INTO Therapy_Assignment VALUES ('V0005', 'TH005', '07-JUN-09', '05-AUG-09')
+INTO Therapy_Assignment VALUES ('V0006', 'TH006', '31-JAN-13', '05-JAN-13')
+INTO Therapy_Assignment VALUES ('V0007', 'TH007', '23-APR-13', '05-MAY-13')
+INTO Therapy_Assignment VALUES ('V0008', 'TH008', '21-SEP-11', '11-OCT-11')
+INTO Therapy_Assignment VALUES ('V0009', 'TH009', '11-AUG-08', '05-SEP-08')
+INTO Therapy_Assignment VALUES ('V0010', 'TH010', '04-NOV-07', '22-NOV-07') 
+SELECT * FROM DUAL;
+
+INSERT ALL
+INTO Therapy_Assignment VALUES ('V0001', 'TH001', '06/02/2012', '06/04/2012')
+INTO Therapy_Assignment VALUES ('V0002', 'TH002', '04/10/2010', '04/18/2010')
+INTO Therapy_Assignment VALUES ('V0003', 'TH003', '05/08/2010', '05/10/2010')
+INTO Therapy_Assignment VALUES ('V0004', 'TH004', '06/09/2012', '06/25/2012')
+INTO Therapy_Assignment VALUES ('V0005', 'TH005', '06/05/2009', '06/30/2009')
+INTO Therapy_Assignment VALUES ('V0006', 'TH006', '04/03/2013', '04/04/2013')
+INTO Therapy_Assignment VALUES ('V0007', 'TH007', '03/02/2012', '03/28/2012')
+INTO Therapy_Assignment VALUES ('V0008', 'TH008', '04/02/2013', '04/04/2013')
+INTO Therapy_Assignment VALUES ('V0009', 'TH009', '04/01/2013', '04/02/2013')
+INTO Therapy_Assignment VALUES ('V0010', 'TH010', '03/28/2013', '03/29/2013')
+SELECT * FROM DUAL;
