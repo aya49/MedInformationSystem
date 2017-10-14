@@ -19,6 +19,6 @@ Oracle APEX Login: http://apex.oracle.com/pls/apex/
  + Password: 123sjx
  + Application: H201 The Hospital
 
-Note: online preview version has expired
+Note: online preview has expired
 
 ![PP](./patient_profile.png)
